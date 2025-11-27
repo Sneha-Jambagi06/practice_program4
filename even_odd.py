@@ -1,5 +1,5 @@
 import sys
-numbers = [int(x) for x in sys.argv[1:]]
+numbers = list(map(int, sys.argv[1:]))
 even = 0
 odd = 0
 for n in numbers:
@@ -7,5 +7,6 @@ for n in numbers:
         even += 1
     else:
         odd += 1
-print("Even count:", even)
-print("Odd count:", odd)
+print(f"Total numbers: {len(numbers)}")
+print(f"Even count: {even}")
+print(f"Odd count: {odd}")
